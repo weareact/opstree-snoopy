@@ -3,7 +3,7 @@
 #### Table of Contents
 
 1. [Overview](#overview)
-2. [USage](#usage)
+2. [Usage](#usage)
 3. [Development - Guide for contributing to the module](#development)
 
 ## Overview
