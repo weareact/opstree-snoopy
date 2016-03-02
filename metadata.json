@@ -1,0 +1,57 @@
+{
+  "name": "opstree-snoopy",
+  "version": "0.1.1",
+  "source": "https://github.com/OpsTree/opstree-snoopy.git",
+  "author": "opstree",
+  "license": "Apache License, Version 2.0",
+  "summary": "Snoopy Install and configure",
+  "description": "THis module will install snoopy and also configure format of logs",
+  "issues_url": "https://github.com/OpsTree/opstree-snoopy/issues",
+  "project_page": "https://github.com/OpsTree/opstree-snoopy.git",
+  "dependencies": [
+    {
+      "name": "lwf/remote_file",
+      "version_requirement": ">= 1.1.3"
+    }
+  ],
+  "types": [
+
+  ],
+  "checksums": {
+    "Modulefile": "2b0f51bcd117cc9b78d258a17ef87eef",
+    "README.md": "66b88c3a3b8936864f5debc667504430",
+    "manifests/configure.pp": "22fbb6a7f14e8a9000c3f34bc70e6f38",
+    "manifests/init.pp": "48293bf6ca405d7e3acc1616cc66a5f8",
+    "manifests/install.pp": "9e62b61cc7a71f1220e90a9f12b2cd88",
+    "manifests/params.pp": "23dcb9a7eff0796df66caffd7f56fdc6",
+    "spec/spec_helper.rb": "a55d1e6483344f8ec6963fcb2c220372",
+    "templates/snoopy.ini.erb": "48e234ed7fec17c3d906290577903f61",
+    "tests/init.pp": "d62693752992a2c86151324d5223303a"
+  },
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "Debian",
+      "operatingsystemrelease": [
+        "5",
+        "6",
+        "7"
+      ]
+    },
+    {
+      "operatingsystem": "RedHat",
+      "operatingsystemrelease": [
+        "5",
+        "6",
+        "7"
+      ]
+    },
+    {
+      "operatingsystem": "Ubuntu",
+      "operatingsystemrelease": [
+        "14.04",
+        "12.04",
+        "10.04"
+      ]
+    }
+  ]
+}
