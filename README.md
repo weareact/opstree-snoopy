@@ -3,12 +3,16 @@
 #### Table of Contents
 
 1. [Overview](#overview)
-2. [Reference - An under-the-hood peek at what the module is doing and how](#reference)
+2. [USage](#usage)
 3. [Development - Guide for contributing to the module](#development)
 
 ## Overview
 
 This Puppet Module will install and configure snoopy logger
+
+## Usage
+
+class {'snoopy':}
 
 ## Development
 
