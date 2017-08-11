@@ -83,8 +83,9 @@ message_format = "<% if @datetime == true %>%{datetime} <% end %>[<% if @usernam
 ;filter_chain = "only_uid:0"
 ;filter_chain = "only_uid:10000"
 ;filter_chain = "exclude_uid:0"
-
-
+<% if @filter_chain -%>
+filter_chain = <%= @filter_chain %>
+<% end -%>
 
 ;;; Output
 ;

@@ -10,5 +10,6 @@ $filename          = true
 $logfile           = false
 $datetime          = false
 $log_path          = '/var/log/snoopy.log'
+$filter_chain      = undef
 $message_format    = undef
 }

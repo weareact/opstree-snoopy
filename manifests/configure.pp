@@ -10,6 +10,7 @@ $filename          = undef,
 $logfile           = undef,
 $log_path          = undef,
 $datetime          = undef,
+$filter_chain      = undef,
 $message_format    = undef
 ){
   # Create snoopy configuration file to generate appropriate logs

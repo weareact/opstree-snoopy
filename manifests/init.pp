@@ -38,6 +38,7 @@ class snoopy (
   $logfile           = $::snoopy::params::logfile,
   $log_path          = $::snoopy::params::log_path,
   $datetime          = $::snoopy::params::datetime,
+  $filter_chain      = $::snoopy::params::filter_chain,
   $message_format    = $::snoopy::params::message_format,
 ) inherits snoopy::params {
   # Install snoopy
@@ -56,6 +57,7 @@ class snoopy (
     logfile           => $logfile,
     log_path          => $log_path,
     datetime          => $datetime,
+    filter_chain      => $filter_chain,
     message_format    => $message_format,
     require           => Class['snoopy::install'],
   }
