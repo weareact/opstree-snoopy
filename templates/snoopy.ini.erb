@@ -42,9 +42,11 @@
 ;message_format = "useless static log entry that gets logged on every program execution"
 ;message_format = "uid=%{uid}"   ; <--- this would only log uids who execute programs, nothing else;
 ;message_format = "uid=%{uid} tty=%{tty} cmdline=%{cmdline}"   ; <--- logs uid + tty + command that is executed
+<% if @message_format -%>
+messge_format = <%= @message_format %>
+<% else -%>
 message_format = "<% if @datetime == true %>%{datetime} <% end %>[<% if @username == true %>username:%{username} <% end %><% if @userid == true %>uid:%{uid} <% end %><% if @groupid == true %>gid:%{gid} <% end %><% if @superid == true %>sid:%{sid} <% end %><% if @terminal == true %>tty:%{tty} <% end %><% if @current_directory == true %>cwd:%{cwd} <% end %><% if @processid == true %>pid:%{pid} <% end %><% if @filename == true %>filename:%{filename} <% end %>]: %{cmdline}"
-
-
+<% end -%>
 
 ;;; Filter Chain specification
 ;

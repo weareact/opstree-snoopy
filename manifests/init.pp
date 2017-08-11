@@ -26,34 +26,38 @@
 #
 # Copyright 2016 Your name here, unless otherwise noted.
 #
-class snoopy(
-$username = $::snoopy::params::username,
-$userid = $::snoopy::params::userid,
-$groupid = $::snoopy::params::groupid,
-$superid = $::snoopy::params::superid,
-$terminal = $::snoopy::params::terminal,
-$current_directory = $::snoopy::params::current_directory,
-$processid = $::snoopy::params::processid,
-$filename = $::snoopy::params::filename,
-$logfile = $::snoopy::params::logfile,
-$log_path = $::snoopy::params::log_path,
-$datetime = $::snoopy::params::datetime
-)inherits snoopy::params{
-	# Install snoopy
-	class {'snoopy::install':}
-	# Configure snoopy logs
-	class {'snoopy::configure':
-		username => $username,
-		userid => $userid,
-		groupid => $groupid,
-		superid => $superid,
-		terminal => $terminal,
-		current_directory => $current_directory,
-		processid => $processid,
-		filename =>$filename,
-		logfile => $logfile,
-		log_path => $log_path,
-		datetime => $datetime,
-		require => Class['snoopy::install'],
-	}
+class snoopy (
+  $username          = $::snoopy::params::username,
+  $userid            = $::snoopy::params::userid,
+  $groupid           = $::snoopy::params::groupid,
+  $superid           = $::snoopy::params::superid,
+  $terminal          = $::snoopy::params::terminal,
+  $current_directory = $::snoopy::params::current_directory,
+  $processid         = $::snoopy::params::processid,
+  $filename          = $::snoopy::params::filename,
+  $logfile           = $::snoopy::params::logfile,
+  $log_path          = $::snoopy::params::log_path,
+  $datetime          = $::snoopy::params::datetime,
+  $message_format    = $::snoopy::params::message_format,
+) inherits snoopy::params {
+  # Install snoopy
+  class {'snoopy::install':}
+
+  # Configure snoopy logs
+  class {'snoopy::configure':
+    username          => $username,
+    userid            => $userid,
+    groupid           => $groupid,
+    superid           => $superid,
+    terminal          => $terminal,
+    current_directory => $current_directory,
+    processid         => $processid,
+    filename          => $filename,
+    logfile           => $logfile,
+    log_path          => $log_path,
+    datetime          => $datetime,
+    message_format    => $message_format,
+    require           => Class['snoopy::install'],
+  }
 }
+# vi:syntax=puppet:filetype=puppet:ts=4:et:
