@@ -27,19 +27,20 @@
 # Copyright 2016 Your name here, unless otherwise noted.
 #
 class snoopy (
-  $username          = $::snoopy::params::username,
-  $userid            = $::snoopy::params::userid,
-  $groupid           = $::snoopy::params::groupid,
-  $superid           = $::snoopy::params::superid,
-  $terminal          = $::snoopy::params::terminal,
   $current_directory = $::snoopy::params::current_directory,
-  $processid         = $::snoopy::params::processid,
+  $datetime          = $::snoopy::params::datetime,
   $filename          = $::snoopy::params::filename,
+  $filter_chain      = $::snoopy::params::filter_chain,
+  $groupid           = $::snoopy::params::groupid,
+  $install_method    = $::snoopy::params::install_method,
   $logfile           = $::snoopy::params::logfile,
   $log_path          = $::snoopy::params::log_path,
-  $datetime          = $::snoopy::params::datetime,
-  $filter_chain      = $::snoopy::params::filter_chain,
   $message_format    = $::snoopy::params::message_format,
+  $processid         = $::snoopy::params::processid,
+  $superid           = $::snoopy::params::superid,
+  $terminal          = $::snoopy::params::terminal,
+  $username          = $::snoopy::params::username,
+  $userid            = $::snoopy::params::userid,
 ) inherits snoopy::params {
   # Install snoopy
   class {'snoopy::install':}

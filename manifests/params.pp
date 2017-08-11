@@ -12,4 +12,7 @@ $datetime          = false
 $log_path          = '/var/log/snoopy.log'
 $filter_chain      = undef
 $message_format    = undef
+$install_method    = 'script'
+$package_ensure    = present
+$package_name      = 'snoopy'
 }
